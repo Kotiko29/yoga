@@ -113,14 +113,10 @@ setClock('timer', deadline);
 
   for(let i=0; i<descriptionBtn.length; i++){
     descriptionBtn[i].addEventListener('click', function() {
-      overlay.classList.toggle('show');
+      // overlay.classList.toggle('show');
       overlay.style.display = 'block';
       document.body.style.overflow = 'hidden';
     });
   }
   
-
-
-
-
 });
