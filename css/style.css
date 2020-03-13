@@ -617,6 +617,13 @@ header ul li:before {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 3;
 }
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
 .overlay .popup {
   position: fixed;
   z-index: 4;

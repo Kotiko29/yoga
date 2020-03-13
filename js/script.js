@@ -90,4 +90,37 @@ function setClock(id, endtime) {
     }
 }
 setClock('timer', deadline);
+
+// Modal 'Узнать больше'
+  let more = document.querySelector('.more'),
+      overlay = document.querySelector('.overlay'),
+      popupClose = document.querySelector('.popup-close');
+
+  more.addEventListener('click', function() {
+    overlay.style.display = 'block';
+    overlay.classList.add('more-splash');
+    document.body.style.overflow = 'hidden';
+  });
+  popupClose.addEventListener('click', function() {
+    overlay.style.display = 'none';
+    overlay.classList.remove('more-splash');
+    document.body.style.overflow = '';
+  });
+
+  // Modal 'Узнать подробнее” в табах'
+
+  let descriptionBtn = document.querySelectorAll('.description-btn');
+
+  for(let i=0; i<descriptionBtn.length; i++){
+    descriptionBtn[i].addEventListener('click', function() {
+      overlay.classList.toggle('show');
+      overlay.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  
+
+
+
+
 });
